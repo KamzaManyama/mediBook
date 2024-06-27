@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/indexStyleSheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="icon" href="images/logo.png">
+    <title>TshwaneMedibook</title>
+</head>
+<body>
+   <header>
+        <div class="navigation" id="nav">
+            <!--natigation name-->
+            <div class="logo">
+                <a href="#nav">Tshwane<span>MediBook</span></a>	
+            </div>
+            
+            <!--navigation links-->
+            <ul class="navlinks nav-active">
+                <li>
+                    <a href="#nav">Home</a> 
+                </li>
+                <li>
+                    <a href="#about">About</a> 
+                </li>
+                <li>
+                    <a href="#services">Services</a> 
+                </li>
+                <li>
+                    <a href="#contact">Contact</a> 
+                </li>
+
+            </ul>
+
+            <div class="burger toggle">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <!--java script-->
+            <script>
+
+                //java script for burger
+                const navSlide = () =>{
+                    const burger = document.querySelector('.burger');
+                    const nav = document.querySelector('.navlinks');
+                    const navLinks = document.querySelectorAll('.navlinks li');
+
+                        //toggele nanigation
+                        burger.addEventListener('click', () => {
+                            
+                            nav.classList.toggle('nav-active');
+
+                            navLinks.forEach((link, index) => {
+                            if(link.style.animation)
+                            {
+                                link.style.animation = '';
+                            }
+                            else
+                            {
+                                link.style.animation = 'navLinkFade 0.5s ease fowards ${index / 7 + 0.s}s';
+                            }
+                        });
+
+                        //Burger animation
+                        burger.classList.toggle('toggle');
+                    });                
+                }
+                navSlide();
+            </script>
+        </div>
+
+        <!-- informationa and picture on the landing-->
+        <section class="indexlanding" id="home">
+            
+            <div class="infomation">
+                <h1>Welcome to TshwaneMedibook where <br> 
+                    your Health is Our <span>NUMBER ONE</span> 
+                    <br>Priority...
+                </h1>
+
+                <p>Tshwane MediBook is more than just a system 
+                    bacause it is a unified engine that was created to take care of its patients from the comfort of their own homes 
+                    and make sure that all patients are well taken care of when going to their respected clinics 
+                </p>
+
+                <div class="buttonsdiv">
+                    
+                    <div class="popup" id="popup">
+                        <div class="overlay"></div>
+
+                        <!--Content button-->
+                        <div class="content" >
+                            <div class="close-btn2" onclick="togglePopup()">&times;</div>
+                            <h1>Learn More about TshwaneMedibook</h1>
+                            <p>Our app works to improve health care services in municipal clinics
+                                by using advanced technology through the use of e-files and
+                                electronic appointment bookings , Virtual queue management ( prediction)
+                                Our app uses a colour coding system to measure the severity of
+                                consultation and urgency of health matter of user who might be
+                                trying to get assistance and depending on the severity assistance
+                                would be provided either a referral to a an online health care administrator or
+                                an ambulance would be sent</p>
+                        </div>
+
+                        <script>
+                            function togglePopup(){
+                                document.getElementById("popup").classList.toggle("active");
+                            }
+                        </script>
+                        <button onclick="togglePopup()">Learn-More</button>
+
+                    </div>
+
+                    <!--this for emergy buttons-->
+                    <div class="popup1" id="popup1">
+                        <div class="overlay"></div>
+
+                        <!--Content button-->
+                        <div class="content" >
+                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <h1>Learn More about TshwaneMedibook</h1>
+                            <p>Our app works to improve health care services in municipal clinics
+                                by using advanced technology through the use of e-files and
+                                electronic appointment bookings , Virtual queue management ( prediction)
+                                Our app uses a colour coding system to measure the severity of
+                                consultation and urgency of health matter of user who might be
+                                trying to get assistance and depending on the severity assistance
+                                would be provided either a referral to a an online health care administrator or
+                                an ambulance would be sent</p>
+                        </div>
+
+                        <script>
+                            function togglePopup(){
+                                document.getElementById("popup1").classList.toggle("active");
+                            }
+                        </script>
+                        <button onclick="togglePopup()">Learn-More</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--go down-->
+		    <a href="#about" class="go-down">
+			    <i class="fa fa-angle-down" aria-hidden="true"></i>
+		    </a>
+	        <!--go down-->
+
+        </section>
+   </header>
+
+   <!--Start About-->
+<section class="about" id="about">
+	<div class="container">
+		<div class="content">
+			<div class="box">
+				<div class="inner">
+					<div class="img">
+						<img src="images/pxfuel.jpg" alt="about"/>
+					</div>
+					<div class="text">
+						<h4>Consultation</h4>
+						<p>Health belief model<br><br>A single Visit Consultation involves examimination of the patients medical record. and more</p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="box">
+				<div class="inner">
+					<div class="img">
+						<img src="images/aa.jpg" alt="about"/>
+					</div>
+					<div class="text">
+						<h4>Improving the system</h4>
+						<p>Ensuring that all information is up to date and evidence based<br><br>Includes features tht allow users to track their health progress</p>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="box">
+				<div class="inner">
+					<div class="img">
+						<img src="images/px.jpg" alt="about"/>
+					</div>
+					<div class="text">
+						<h4>ChatBox</h4>
+						<p>Ever had question and not being able to receive answers?<br><br>Having a bot respond to your questions and request.</p> 
+					</div>
+				</div>
+				
+			</div>
+
+
+		</div>
+		
+	</div>
+	
+</section>
+<!--End About-->
+
+<!--Start Service-->
+<section class="service" id="services">
+    <div class="container">
+        <div class="content">
+        <div class="text box">
+            <h2>What we do</h2>
+            <p>Our app works to improve health care services in municipal clinics 
+                by using advanced technology through the use of e-files and
+                electronic appointment bookings , Virtual queue management ( prediction).
+                </p>
+            <p>	Our app uses a colour coding system to measure the severity of 
+                consultation and urgency of health matter of user who might be 
+                trying to get assistance and depending on the severity assistance 
+                would be provided either a referral to a an online health care administrator or
+                an ambulance would be sent</p>
+            <a href="LoginPage.html" class="btn">Get Started</a>
+        </div>
+        <div class="accordian box">
+            <div class="accordian-container active">
+                <div class="head">
+                    <h4>Levels</h4>	
+                    <span class="fa fa-angle-down"></span>
+                </div>
+                <div class="body">
+                    <p></p><!--add text-->
+                </div>
+            </div>
+                
+            <div class="accordian-container">
+                <div class="head">
+                    <h4>Black Type</h4>	
+                    <span class="fa fa-angle-up"></span>
+                </div>
+                <div class="body">
+                    <p>Highlights emergency issues that require immediate attention.</p><!--add text-->
+                </div>
+            </div>
+
+            <div class="accordian-container">
+                <div class="head">
+                    <h4>Red Type</h4>	
+                    <span class="fa fa-angle-up"></span>
+                </div>
+                <div class="body">
+                    <p>Highlights intermediate issues that can be neutral</p><!--add text-->
+                </div>
+            </div>
+
+            <div class="accordian-container">
+                <div class="head">
+                    <h4>Green Type</h4>	
+                    <span class="fa fa-angle-up"></span>
+                </div>
+                <div class="body">
+                    <p>Basic issues that do not need much of attention from the Health-Care </p><!--add text-->
+                </div>
+            </div>
+
+
+        </div>
+
+        </div>
+    </div>
+    
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script >
+	$(document).ready(function(){
+		 $(".ham-burger, .nav ul li a").click(function(){
+
+		 	$(".nav").toggleClass("open")
+		 	$(".ham-burger").toggleClass("active");
+		 })
+		 $(".accordian-container").click(function(){
+		 	$("accordian-container").children(".body").slideUp();
+		 	$("accordian-container").removeClass("active")
+		 	$("accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+		 	$(this).children(".body").slideDown();
+		 	$(this).addClass("active")
+		 	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+		 })
+
+		 $(".nav ul li a, .go-down").click(function(event){
+		 	if (this.hash !== "") {
+
+		 		event.preventDefault();
+
+		 		var hash=this.hash;
+
+		 		$('html,body').animate({
+		 			scrollTop:$(hash).offset().top
+		 		 },800 , function(){
+		 		 	window.location.hash=hash;
+		 		 
+		 		});
+
+		 		//add active class in navigation
+		 		$(".nav ul li a").removeClass(".active")
+		 		$(this).addClass("active")
+		 	}
+
+
+
+		 })
+
+	})
+</script>
+
+<!--End Service-->
+
+<!--Start Contact-->
+<section class="contact" id="contact">
+	<div class="container">
+		<div class="content">
+			<div class="box form">
+				<form action="https://formspree.io/f/xnqlkkbq" method="POST">
+					<input type="text" placeholder="Enter Names" name="names" required>
+					<input type="text" placeholder="Enter E-mail" name="email" required>
+					<input type="text" placeholder="Enter 10 digits." name="number" pattern="[0-9]{10}" required>
+					<textarea placeholder="Enter Message"></textarea> 
+					<button type="submit">Send Message</button>
+				</form>
+			</div>
+			<div class="box text">
+				<h2>Contact Us</h2>
+				<p class="title-p">For more information you can contact us from the details provided below.<br>
+				You can also follow us on our social media platforms.</p>
+				<div class="info">
+					<ul>
+						<li><span class="fa fa-map-marker"></span>asmklsdkaos skakds, Pretoria</li>
+						<li><span class="fa fa-phone"></span>011 568 9547</li>
+						<li><a href="mailto:LimitBreakers@gmail.com"><span class="fa fa-envelope"></span>LimitBreakers@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="social">
+					<a href="https://facebook.com/groups/625680288597245/"><span class="fa fa-facebook"></span></a>
+					<a href=""><span class="fa fa-instagram"></span></a>
+					<a href=""><span class="fa fa-skype"></span></a>
+					<a href=""><span class="fa fa-youtube-play"></span></a>
+				</div>
+
+				
+			</div>
+		</div>
+
+        <div class="copy">
+            PowerBy &copy; E-Health Geeks
+        </div>
+	</div>
+	
+</section>
+
+<!--End Contact-->
+
+</body>
+</html>
